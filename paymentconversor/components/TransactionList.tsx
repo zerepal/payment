@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Transaction, UserSettings } from '../types';
+import { Transaction } from '../types';
 import { format } from 'date-fns';
 import { Trash2 } from 'lucide-react';
 

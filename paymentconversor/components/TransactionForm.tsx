@@ -1,8 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Transaction, UserSettings } from '../types';
-import { PlusCircle, Calculator, Calendar, Percent, Info } from 'lucide-react';
-
+import { PlusCircle, Calculator, Calendar, Percent} from 'lucide-react';
 interface Props {
   onAdd: (transaction: Transaction) => void;
   settings: UserSettings;

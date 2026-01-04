@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { UserSettings } from '../types';
-import { Settings, Save, Globe2, CreditCard, RefreshCw, Percent, Coins } from 'lucide-react';
+import { Settings, Save, Globe2, CreditCard, Percent, Coins } from 'lucide-react';
 
 interface Props {
   settings: UserSettings;

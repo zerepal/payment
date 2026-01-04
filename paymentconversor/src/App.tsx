@@ -1,8 +1,7 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 
-import React, { useState, useEffect, useMemo } from 'react';
+import  { useState, useEffect, useMemo } from 'react';
 import { Transaction, UserSettings } from '../types';
 import { TransactionForm } from '../components/TransactionForm';
 import { TransactionList } from '../components/TransactionList';
@@ -24,7 +23,6 @@ import {
   Globe, 
   BarChart3, 
   Sparkles, 
-  CreditCard,
   TrendingUp,
   RefreshCw,
   Settings as SettingsIcon,
@@ -36,9 +34,9 @@ import {
 const DEFAULT_SETTINGS: UserSettings = {
   defaultCurrencyCode: 'CLP',
   defaultLocalToUSDRate: 900,
-  homeCurrencyName: 'CLP',
+  homeCurrencyName: 'SOL',
   homeCurrencySymbol: '$',
-  defaultUSDToHomeRate: 900,
+  defaultUSDToHomeRate: 3.38,
   bankCommission: 1.5
 };
 
@@ -56,7 +54,7 @@ function App() {
     return saved ? JSON.parse(saved) : DEFAULT_SETTINGS;
   });
 
-  const [insights, setInsights] = useState<string>('');
+  const [insights] = useState<string>('');
   const [loadingInsights, setLoadingInsights] = useState(false);
 
   useEffect(() => {
@@ -249,7 +247,7 @@ function App() {
                           cursor={{fill: '#f8fafc'}}
                         />
                         <Bar dataKey="amount" radius={[8, 8, 0, 0]}>
-                          {chartData.map((entry, index) => (
+                          {chartData.map((_, index) => (
                             <Cell key={`cell-${index}`} fill={index % 2 === 0 ? '#4f46e5' : '#818cf8'} />
                           ))}
                         </Bar>
