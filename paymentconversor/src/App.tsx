@@ -35,7 +35,7 @@ const DEFAULT_SETTINGS: UserSettings = {
   defaultCurrencyCode: 'CLP',
   defaultLocalToUSDRate: 900,
   homeCurrencyName: 'SOL',
-  homeCurrencySymbol: '$',
+  homeCurrencySymbol: 'S/',
   defaultUSDToHomeRate: 3.38,
   bankCommission: 1.5
 };
